@@ -155,3 +155,37 @@
     stringstyle=\color{Mahogany},
     columns=flexible
 }
+
+% statement of non-plagiarism (?)
+\newcommand*{\makestatement}{
+    \newpage
+    \thispagestyle{empty}
+    \begin{framed}
+    \begin{center}
+    \Large\bfseries Erklärung
+    \end{center}
+    \medskip
+    \noindent
+    Ich versichere hiermit, dass ich meine \@projecttype\ mit dem Thema:
+    \enquote{\@projecttitle}
+    selbstständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.
+    Ich versichere zudem, dass die eingereichte elektronische Fassung mit der gedruckten Fassung übereinstimmt.
+
+    \vspace{3cm}
+    \noindent
+    \underline{\hspace{4cm}}\hfill\underline{\hspace{6cm}}\\
+    Ort~~~~~Datum\hfill Unterschrift\hspace{4cm}
+    \end{framed}
+}
+
+\newcommand*{\makenda}{
+    \vfill
+    \begin{framed}
+    \begin{center}
+    \Large\bfseries Sperrvermerk
+    \end{center}
+    \medskip
+    \noindent
+    Der Inhalt dieser Arbeit darf weder als Ganzes noch in Auszügen Personen außerhalb des Prüfungsprozesses und des Evaluationsverfahrens zugänglich gemacht werden, sofern keine anderslautende Genehmigung vom Dualen Partner vorliegt.
+    \end{framed}
+}
