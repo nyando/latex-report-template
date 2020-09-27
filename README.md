@@ -15,4 +15,4 @@ System-specific compilation scripts:
 
 * `compile.bat` - Windows batch file for compilation of `dhpaper.tex`, including BibTeX bibliography and `glossaries` package (requires a Perl installation).
 * `cleanup.bat` - Cleans up intermediately generated files. Packed as a separate file from `compile.bat` for troubleshooting purposes.
-* Linux scripts are coming soon.
+* `Makefile` - works under Linux and Windows; requires a Perl installation.
