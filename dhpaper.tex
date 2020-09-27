@@ -1,0 +1,89 @@
+\documentclass[ngerman,a4paper,11pt,pdftex]{report}
+\usepackage{dhpaper}
+\usepackage{lipsum}
+
+\includeonly{
+    intro,
+    foundations,
+    body,
+    conclusion,
+    glossary
+}
+
+\makeglossaries
+\include{glossary}
+
+\bibliography{bericht}
+
+\begin{document}
+
+% project details
+\projecttitle{Titel der Arbeit}
+\projectauthor{Vorname Nachname}
+\projecttype{Art der Arbeit}
+\studentid{9999999}
+
+% company information
+\companyname{Wirecard AG}
+\companylocation{Aschheim}
+\companylogo{lipsum_logo_1}
+\companyadvisor{Vorname Nachname}
+
+% timeline
+\deadline{01.01.1970}
+\duration{1000 Jahre}
+
+% school information
+\schoolname{School of Computer Stuff}
+\schoollogo{lipsum_logo_2}
+\schooladvisor{Vorname Nachname}
+
+% degree information
+\degreetype{Master of Disaster}
+\subject{Universalwissenschaften}
+\courseid{WTF20BBQ}
+
+\maketitle
+
+\begin{onehalfspace}
+    \pagenumbering{gobble}
+    \tableofcontents
+    
+    \clearpage
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+    % list of figures
+    \listoffigures
+    \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+   
+    % list of tables
+    \listoftables
+    \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+
+    % list of code listings
+    \lstlistoflistings
+    \addcontentsline{toc}{chapter}{Codelistingverzeichnis}
+
+    \clearpage
+    \pagenumbering{arabic}
+    % main body of the report, separated by chapters
+    \include{intro}
+    \include{foundations}
+    \include{body}
+    \include{conclusion}
+
+    \clearpage
+    \pagenumbering{roman}
+    \setcounter{page}{4}
+    \appendix
+
+    % bibliography
+    \printbibliography[title={Literaturverzeichnis}]
+    \addcontentsline{toc}{chapter}{Literaturverzeichnis}
+    
+    % list of abbreviations, glossary of terms
+    \printglossary[title={Abkürzungsverzeichnis},type=\acronymtype]
+    \printglossary
+\end{onehalfspace}
+
+\end{document}
