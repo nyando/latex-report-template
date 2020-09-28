@@ -49,25 +49,27 @@
 
 \makenda
 
+% table of contents, listings
+\pagenumbering{gobble}
+\tableofcontents
+
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+% list of figures
+\listoffigures
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+
+% list of tables
+\listoftables
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+
+% list of code listings
+\lstlistoflistings
+\addcontentsline{toc}{chapter}{Codelistingverzeichnis}
+
+% actual body of the report
 \begin{onehalfspace}
-    \pagenumbering{gobble}
-    \tableofcontents
-    
-    \clearpage
-    \pagenumbering{roman}
-    \setcounter{page}{1}
-    % list of figures
-    \listoffigures
-    \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-   
-    % list of tables
-    \listoftables
-    \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-
-    % list of code listings
-    \lstlistoflistings
-    \addcontentsline{toc}{chapter}{Codelistingverzeichnis}
-
     \clearpage
     \pagenumbering{arabic}
     % main body of the report, separated by chapters
@@ -75,19 +77,19 @@
     \include{foundations}
     \include{body}
     \include{conclusion}
-
-    \clearpage
-    \pagenumbering{roman}
-    \setcounter{page}{4}
-    \appendix
-
-    % bibliography
-    \printbibliography[title={Literaturverzeichnis}]
-    \addcontentsline{toc}{chapter}{Literaturverzeichnis}
-    
-    % list of abbreviations, glossary of terms
-    \printglossary[title={Abkürzungsverzeichnis},type=\acronymtype]
-    \printglossary
 \end{onehalfspace}
+
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{4}
+\appendix
+
+% bibliography
+\printbibliography[title={Literaturverzeichnis}]
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+% list of abbreviations, glossary of terms
+\printglossary[title={Abkürzungsverzeichnis},type=\acronymtype]
+\printglossary
 
 \end{document}
